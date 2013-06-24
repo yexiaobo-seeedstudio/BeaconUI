@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:layout_margin="10dp"
+    android:background="#00000000"
+    android:orientation="horizontal" >
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/listview_style" >
+
+    <ImageView
+        android:id="@+id/corner_listview_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/logo_green_48" />
+
+    <LinearLayout
+        android:id="@+id/list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/corner_listview_image"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/corner_listview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/corner_listview_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!--
+         <TextView
+        android:id="@+id/corner_listview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/corner_listview_image"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+    -->
+
+
+    <!--
+         <TextView
+        android:id="@+id/corner_listview_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/corner_listview_image"
+        android:layout_alignLeft="@+id/corner_listview_title"
+        android:layout_marginTop="3dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="8sp" />
+    -->
+
+</RelativeLayout><!--
+<ImageView
+        android:id="@+id/corner_listview_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_compose_inverse" />
+
+    <TextView
+        android:id="@+id/corner_listview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/corner_listview_image"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/corner_listview_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/corner_listview_image"
+        android:layout_alignLeft="@+id/corner_listview_title"
+        android:layout_marginTop="3dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="8sp" />
+-->
+
+<!-- </LinearLayout> -->

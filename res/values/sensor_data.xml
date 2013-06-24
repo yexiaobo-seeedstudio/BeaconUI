@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sensor">
+        <item>Null</item>
+        <item>Grove Slide Potentiometer</item>
+        <item>Grove Barometer Sensor</item>
+        <item>Temperature and Humidity(Temperature)</item>
+        <item>Temperature and Humidity(Humidity)</item>
+        <item>Grove Button</item>
+        <item>Grove Light Sensor</item>
+        <item>Grove PIR Motion Sensor </item>
+        <item>Grove Water Sensor</item>
+        <item>Grove Sound Sensor</item>
+        <item>Grove IR Distance Interrupter</item>
+        <item>Grove Temperature Sensor</item>
+        <item>Grove Moisture sensor</item>
+        <item>Grove Ultrasonic sensor</item>
+    </string-array>
+
+</resources>

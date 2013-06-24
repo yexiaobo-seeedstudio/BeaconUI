@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/soft_white"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!--
+        <ImageView
+            android:id="@+id/add_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+    -->
+
+    <com.seeedstudio.beacon.ui.widget.CornerListView
+        android:id="@+id/corner_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:cacheColorHint="#00000000" />
+
+</LinearLayout>

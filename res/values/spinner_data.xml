@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="frq">
+        <item>Null</item>
+        <item>Standard(1s)</item>
+        <item>Fast(100ms)</item>
+        <item>Low(1min)</item>
+        <item>Minimun(1hour)</item>
+    </string-array>
+    <string-array name="units">
+        <item>ms</item>
+        <item>s</item>
+        <item>min</item>
+        <item>hour</item>
+    </string-array>
+    <string-array name="action_type">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="compare_type">
+        <item>&gt;</item>
+        <item>&lt;</item>
+        <item>=</item>
+        <item>Null</item>
+    </string-array>
+    <string-array name="sensor">
+        <item>Null</item>
+        <item>Grove Button</item>
+        <item>Grove Tilt Switch Sensor</item>
+        <item>Grove Line Finder</item>
+        <item>Grove PIR Motion Sensor </item>
+        <item>Grove Infrared Reflective</item>
+        <item>Grove Magnetic switch</item>
+        <item>Grove Touch Sensor</item>
+        <item>Grove IR Distance Interrupter</item>
+        <item>Grove Hall Sensor</item>
+        <item>Grove Switch</item>
+        <item>Grove Collision Sensor</item>
+        <item>Grove Moisture Sensor</item>
+        <item>Grove Light Sensor</item>
+        <item>Grove Rotary Angle Sensor</item>
+        <item>Grove Temperature Sensor</item>
+        <item>Grove Water Sensor</item>
+        <item>Grove 80cm Infrared Proximity Sensor</item>
+        <item>Grove Infrared Temperature Sensor</item>
+        <item>Grove Slide Potentiometer</item>
+        <item>Grove Air quality Potentiometer</item>
+        <item>Grove Electricity Potentiometer</item>
+        <item>Grove Alcohol Potentiometer</item>
+        <item>Grove Sound Sensor</item>
+        <item>Grove Ultrasonic sensor</item>
+        <item>Grove Barometer Sensor</item>
+        <item>Grove Digital Light Potentiometer</item>
+        <item>Temperature and Humidity Pro(Temperature)</item>
+        <item>Temperature and Humidity Pro(Humidity)</item>
+        <item>Grove I2C Color Potentiometer</item>
+        <item>Grove Infrared Receiver Sensor</item>
+    </string-array>
+    <string-array name="actuator">
+        <item>Null</item>
+        <item>Grove Relay</item>
+        <item>Grove LED</item>
+        <item>Grove Purple LED</item>
+        <item>Grove Multi Color Flash LED</item>
+        <item>Grove Variable Color LED</item>
+        <item>Grove Buzzer</item>
+        <item>Grove Vibrator</item>
+        <item>Grove OLED Display 128*64</item>
+        <item>Grove OLED 96x96</item>
+        <item>Grove 4-Digit DisplayD</item>
+        <item>Grove LED Bar</item>
+        <item>Grove Infrared Emitter</item>
+        <item>Servo</item>
+        <item>Motor</item>
+    </string-array>
+
+</resources>

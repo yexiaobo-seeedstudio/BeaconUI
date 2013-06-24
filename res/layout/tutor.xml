@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.seeedstudio.beacon.ui"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <org.taptwo.android.widget.ViewFlow
+        android:id="@+id/tutor_viewflow"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        app:sidebuffer="5" >
+    </org.taptwo.android.widget.ViewFlow>
+
+    <Button
+        android:id="@+id/tutor_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tutor_header_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tutor_button_style"
+        android:text="@string/tutor_button"
+        android:textColor="#ff000000"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/tutor_header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <org.taptwo.android.widget.CircleFlowIndicator
+            android:id="@+id/tutor_viewflow_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:padding="10dip" >
+        </org.taptwo.android.widget.CircleFlowIndicator>
+    </LinearLayout>
+
+</RelativeLayout>

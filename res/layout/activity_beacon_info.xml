@@ -1,0 +1,391 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_white"
+    tools:context=".BeaconInfoActivity" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <!--
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            -->
+
+
+            <!--
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+            -->
+
+            <TextView
+                android:id="@+id/info_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/device_info"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/info_device"
+                android:layout_marginTop="3dp"
+                android:background="@color/soft_white" />
+
+            <LinearLayout
+                android:id="@+id/device_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/device_name_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/device_name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/device_id_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/device_layout"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/device_id_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/device_id"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/device_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Device ID" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info_sensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_below="@+id/device_id_layout"
+                android:layout_marginTop="12dp"
+                android:text="@string/sensor_info"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/info_sensor"
+                android:layout_marginTop="3dp"
+                android:background="@color/soft_white" />
+
+            <LinearLayout
+                android:id="@+id/sensor_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/sensor_layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/sensor_name_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sensor_name"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/sensor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sensor_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/sensor_freq_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sensor_freq"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/sensor_freq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Frequency" />
+                </LinearLayout>
+
+                <!--
+                <LinearLayout
+                    android:id="@+id/sensor_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/sensor_unit_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sensor_unit"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/sensor_uint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Unit" />
+                </LinearLayout>
+                -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info_actuator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_below="@+id/sensor_layout"
+                android:layout_marginTop="12dp"
+                android:text="@string/actuator_info"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/info_actuator"
+                android:layout_marginTop="3dp"
+                android:background="@color/soft_white" />
+
+            <LinearLayout
+                android:id="@+id/actuator_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/info_reconfig"
+                android:layout_alignRight="@+id/info_delete"
+                android:layout_below="@+id/view3"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/actuator_layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/actuator_name_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actuator_name"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/actuator_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actuator_layout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/actuator_trigger_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actuator_trigger"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/actuator_trigger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Trigger from" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actuator_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/actuator_freq_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actuator_action"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/actuator_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Actions" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actuator_layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/actuator_compare_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actuator_compare"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/actuator_compare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Compare Action" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actuator_layout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/actuator_compare_value_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actuator_compare_value"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/actuator_compare_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Compare Value" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/info_reconfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/actuator_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/info_button_style"
+                android:gravity="center"
+                android:text="@string/reconfig"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <!--
+                 <Button
+                android:id="@+id/info_reconfig"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/info_delete"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/info_button_style"
+                android:gravity="center"
+                android:text="@string/reconfig"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+            -->
+
+            <Button
+                android:id="@+id/info_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/actuator_layout"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/info_button_style"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="#ff000000"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/info_delete"
+                android:layout_marginTop="10dp" />
+            <!-- </RelativeLayout> -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seeedstudio.beacon.ui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ThemeActivity" >
+        <activity
+            android:name="com.seeedstudio.beacon.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sherlock.Light" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.PICK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.seeedstudio.beacon" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.seeedstudio.beacon" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.tutor.TutorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.BeaconInfoActivity"
+            android:label="@string/title_activity_beacon_info"
+            android:parentActivityName="com.actionbarsherlock.app.SherlockActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.actionbarsherlock.app.SherlockActivity" />
+
+            <intent-filter android:label="Beacon Info" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.seeedstudio.beacon" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.seeedstudio.beacon" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.ConfigureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_configure"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sherlock.Light.Dialog"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.SensorListActivity"
+            android:label="@string/title_activity_sensor_list"
+            android:theme="@style/Theme.Sherlock.Light.Dialog" >
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.NormalSetupActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_normal_setup"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+            <intent-filter android:label="Edit Beacon" >
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.INSERT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.seeedstudio.beacon" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.seeedstudio.beacon" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.seeedstudio.beacon" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.seeedstudio.beacon.ui.AtomListActivity"
+            android:label="@string/title_activity_atom_list"
+            android:parentActivityName="com.actionbarsherlock.app.SherlockActivity"
+            android:theme="@style/Theme.Sherlock.Light.Dialog" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.actionbarsherlock.app.SherlockActivity" />
+        </activity>
+
+        <provider
+            android:name="com.seeedstudio.beacon.data.BeaconProvider"
+            android:authorities="com.seeedstudio.provider.Beacon"
+            android:exported="false" >
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
+    </application>
+
+</manifest>
